@@ -28,6 +28,20 @@ describe('DevDock', () => {
     );
   });
 
+  it('uses related tool icons instead of numeric badges', () => {
+    render(<App />);
+
+    expect(screen.getByLabelText(/planning poker icon/i)).toBeInTheDocument();
+    expect(screen.getByLabelText(/realm manager icon/i)).toBeInTheDocument();
+    expect(screen.getByLabelText(/menu visualizer icon/i)).toBeInTheDocument();
+    expect(screen.getByLabelText(/csv splitter icon/i)).toBeInTheDocument();
+
+    expect(screen.queryByText('1')).not.toBeInTheDocument();
+    expect(screen.queryByText('2')).not.toBeInTheDocument();
+    expect(screen.queryByText('3')).not.toBeInTheDocument();
+    expect(screen.queryByText('4')).not.toBeInTheDocument();
+  });
+
   it('filters tools by name and description', async () => {
     const user = userEvent.setup();
     render(<App />);
