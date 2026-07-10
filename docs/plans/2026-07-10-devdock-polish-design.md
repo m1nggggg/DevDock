@@ -2,7 +2,7 @@
 
 ## Direction
 
-DevDock will use a precise developer-instrument aesthetic with small editorial touches. The interface should feel closer to a carefully made native utility than a generic SaaS landing page: warm off-white surfaces, dense but readable rows, a single cobalt accent, monospace metadata, and no decorative gradients or oversized cards.
+DevDock will use a precise native-utility aesthetic with small editorial touches. The interface should feel closer to a carefully made desktop index than a generic SaaS landing page: a flat warm off-white canvas, dense but readable rows, sharp borders, a single cobalt accent, monospace metadata, and no decorative patterns, gradients, or oversized cards.
 
 The information hierarchy is deliberately spare. A compact top bar establishes the product, followed directly by a prominent search control with a visible `/` keyboard hint. There is no promotional hero or explanatory footer: the interface assumes its users came to open a tool. The directory is a single bordered surface with structured rows, explicit categories, result count, and full-row links. This preserves the product principle that search and clear labels matter more than categories while still making each result easy to scan.
 
