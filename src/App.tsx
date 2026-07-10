@@ -64,24 +64,9 @@ const App = () => {
       <header className="topbar">
         <a className="brand" href="/" aria-label="DevDock home">
           <span className="brand-mark" aria-hidden="true">D/</span>
-          <span>DevDock</span>
+          <h1>DevDock</h1>
         </a>
-        <div className="workspace-meta">
-          <span className="status-dot" aria-hidden="true" />
-          Team utility index
-        </div>
       </header>
-
-      <section className="intro" aria-labelledby="page-title">
-        <div>
-          <p className="eyebrow">Raw link index · v1.0</p>
-          <h1 id="page-title">The shortest route{' '}<br />to your tools.</h1>
-        </div>
-        <p className="intro-copy">
-          A focused launchpad for the small utilities that keep your team moving.
-          Find what you need, then get back to the work.
-        </p>
-      </section>
 
       <section className="directory" aria-label="Developer tool directory">
         <div className="search-panel" role="search">
@@ -107,7 +92,7 @@ const App = () => {
         </div>
 
         <div className="directory-heading">
-          <h2>Docked tools</h2>
+          <h2>Tools</h2>
           <span aria-live="polite">{resultLabel}</span>
         </div>
 
@@ -137,18 +122,12 @@ const App = () => {
           </div>
         ) : (
           <div className="empty-state" aria-live="polite">
-            <span className="empty-code">404 / NO MATCH</span>
             <h2>No tools match “{query}”</h2>
             <p>Try another term or reset the index to see every tool.</p>
             <button type="button" onClick={() => setQuery('')}>Reset search</button>
           </div>
         )}
       </section>
-
-      <footer className="site-footer">
-        <span>DevDock / Internal</span>
-        <span>Four tools. Zero detours.</span>
-      </footer>
     </main>
   );
 };

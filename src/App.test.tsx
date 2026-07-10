@@ -9,8 +9,7 @@ describe('DevDock', () => {
     render(<App />);
 
     expect(screen.getByRole('link', { name: /devdock home/i })).toBeInTheDocument();
-    expect(screen.getByRole('heading', { name: /shortest route/i })).toBeInTheDocument();
-    expect(screen.getByText(/raw link index/i)).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: /devdock/i })).toBeInTheDocument();
     expect(screen.getByRole('link', { name: /open tool planning poker/i })).toHaveAttribute(
       'href',
       'https://poker-pi-eosin.vercel.app/',
