@@ -55,10 +55,6 @@ const App = () => {
     return () => window.removeEventListener('keydown', handleShortcut);
   }, [query]);
 
-  const resultLabel = query
-    ? `${filteredTools.length} ${filteredTools.length === 1 ? 'match' : 'matches'}`
-    : `${tools.length.toString().padStart(2, '0')} tools`;
-
   return (
     <main className="page-shell">
       <header className="topbar">
@@ -89,11 +85,6 @@ const App = () => {
           ) : (
             <kbd aria-label="Keyboard shortcut: slash">/</kbd>
           )}
-        </div>
-
-        <div className="directory-heading">
-          <h2>Tools</h2>
-          <span aria-live="polite">{resultLabel}</span>
         </div>
 
         {filteredTools.length > 0 ? (
