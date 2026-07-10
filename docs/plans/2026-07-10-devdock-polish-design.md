@@ -2,7 +2,7 @@
 
 ## Direction
 
-DevDock will use a precise native-utility aesthetic with small editorial touches. The interface should feel closer to a carefully made desktop index than a generic SaaS landing page: a flat warm off-white canvas, dense but readable rows, sharp borders, a single cobalt brand anchor, monospace metadata, and no decorative patterns, gradients, oversized cards, heavy dark bars, or multi-color tool coding. Tool icons and category badges use warm neutrals. Hover is tactile and visible, using a pronounced warm highlight with an ink rail and launch action.
+DevDock will use a precise native-utility aesthetic with small editorial touches. The interface should feel closer to a carefully made desktop index than a generic SaaS landing page: a flat warm off-white canvas, dense but readable rows, sharp borders, a single cobalt brand anchor, monospace metadata, and no decorative patterns, gradients, oversized cards, heavy dark bars, or multi-color tool coding. Tool icons and category badges use quiet neutrals. Hover is tactile and visible, using a pronounced cool-gray highlight that harmonizes with the cobalt brand without becoming blue, plus an ink rail and launch action.
 
 The information hierarchy is deliberately spare. A compact top bar establishes the product, followed directly by a prominent search control with a visible `/` keyboard hint. There is no promotional hero, explanatory footer, or redundant list header: the interface assumes its users came to open a tool. The directory is a single bordered surface with structured rows, explicit categories, and full-row links. This preserves the product principle that search and clear labels matter more than categories while still making each result easy to scan.
 

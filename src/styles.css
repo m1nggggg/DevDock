@@ -4,6 +4,7 @@
   --ink-faint: oklch(58% 0.014 255);
   --paper: oklch(97.5% 0.008 86);
   --surface: oklch(99.2% 0.005 86);
+  --surface-hover: oklch(92.5% 0.008 255);
   --line: oklch(82.5% 0.012 255);
   --line-soft: oklch(89.5% 0.009 255);
   --accent: oklch(52% 0.205 267);
@@ -240,7 +241,7 @@ a {
 }
 
 .tool-item:hover {
-  background: oklch(91.5% 0.055 86);
+  background: var(--surface-hover);
   box-shadow: inset 4px 0 var(--ink);
 }
 
