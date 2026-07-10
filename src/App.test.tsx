@@ -8,7 +8,8 @@ describe('DevDock', () => {
   it('renders the current developer tools as external links', () => {
     render(<App />);
 
-    expect(screen.getByRole('heading', { name: /devdock/i })).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: /devdock home/i })).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: /shortest route/i })).toBeInTheDocument();
     expect(screen.getByText(/raw link index/i)).toBeInTheDocument();
     expect(screen.getByRole('link', { name: /open tool planning poker/i })).toHaveAttribute(
       'href',
@@ -66,5 +67,26 @@ describe('DevDock', () => {
     await user.type(screen.getByRole('searchbox', { name: /search tools/i }), 'not-a-tool');
 
     expect(screen.getByText(/no tools match/i)).toBeInTheDocument();
+  });
+
+  it('supports keyboard-first search and escape reset', async () => {
+    const user = userEvent.setup();
+    render(<App />);
+
+    const search = screen.getByRole('searchbox', { name: /search tools/i });
+
+    await user.keyboard('/');
+    expect(search).toHaveFocus();
+
+    await user.type(search, 'platform');
+    expect(screen.getByText('Realm Manager')).toBeInTheDocument();
+    expect(screen.queryByText('Planning Poker')).not.toBeInTheDocument();
+
+    await user.keyboard('{Escape}');
+    expect(search).toHaveValue('');
+    expect(search).toHaveFocus();
+
+    await user.keyboard('{Escape}');
+    expect(search).not.toHaveFocus();
   });
 });
