@@ -1,8 +1,11 @@
+type ToolTone = 'violet' | 'teal' | 'indigo' | 'amber' | 'green';
+
 type DevTool = {
   name: string;
   url: string;
   description: string;
   category: string;
+  tone: ToolTone;
 };
 
 export const tools: DevTool[] = [
@@ -11,29 +14,34 @@ export const tools: DevTool[] = [
     url: 'https://poker-pi-eosin.vercel.app/',
     description: 'Estimate stories with your team in a focused session.',
     category: 'Collaboration',
+    tone: 'violet',
   },
   {
     name: 'Text Workbench',
     url: 'https://text-workbench-black.vercel.app/',
     description: 'Compare text and JSON locally with precise diffs.',
     category: 'Data',
+    tone: 'teal',
   },
   {
     name: 'Realm Manager',
     url: 'https://realm-manager.vercel.app/',
     description: 'Manage realm configuration from one dedicated surface.',
     category: 'Platform',
+    tone: 'indigo',
   },
   {
     name: 'Menu Visualizer',
     url: 'https://menu-visualizer-six.vercel.app/',
     description: 'Preview menu structure and inspect navigation behavior.',
     category: 'Interface',
+    tone: 'amber',
   },
   {
     name: 'CSV Splitter',
     url: 'https://csv-splitter-woad.vercel.app/',
     description: 'Split large CSV files into smaller workable pieces.',
     category: 'Data',
+    tone: 'green',
   },
 ];

@@ -224,6 +224,9 @@ a {
 }
 
 .tool-item {
+  --icon-color: var(--ink-soft);
+  --icon-surface: var(--paper);
+  --icon-line: var(--line);
   display: grid;
   grid-template-columns: 28px 40px minmax(0, 1fr) 120px 34px;
   align-items: center;
@@ -234,6 +237,36 @@ a {
   color: var(--ink);
   text-decoration: none;
   transition: background-color 140ms ease, box-shadow 140ms ease;
+}
+
+.tool-item--violet {
+  --icon-color: oklch(48% 0.15 304);
+  --icon-surface: oklch(95% 0.025 304);
+  --icon-line: oklch(83% 0.055 304);
+}
+
+.tool-item--teal {
+  --icon-color: oklch(45% 0.11 190);
+  --icon-surface: oklch(95% 0.024 190);
+  --icon-line: oklch(83% 0.052 190);
+}
+
+.tool-item--indigo {
+  --icon-color: oklch(49% 0.16 267);
+  --icon-surface: oklch(95% 0.025 267);
+  --icon-line: oklch(83% 0.055 267);
+}
+
+.tool-item--amber {
+  --icon-color: oklch(50% 0.12 72);
+  --icon-surface: oklch(95% 0.03 72);
+  --icon-line: oklch(83% 0.06 72);
+}
+
+.tool-item--green {
+  --icon-color: oklch(46% 0.12 145);
+  --icon-surface: oklch(95% 0.025 145);
+  --icon-line: oklch(83% 0.055 145);
 }
 
 .tool-item:last-child {
@@ -261,18 +294,18 @@ a {
   place-items: center;
   width: 38px;
   height: 38px;
-  border: 1px solid var(--line);
+  border: 1px solid var(--icon-line);
   border-radius: 8px;
-  background: oklch(94.5% 0.025 86);
-  color: var(--ink-soft);
+  background: var(--icon-surface);
+  color: var(--icon-color);
   transition: border-color 150ms ease, background-color 150ms ease, color 150ms ease;
 }
 
 .tool-item:hover .tool-icon,
 .tool-item:focus-visible .tool-icon {
-  border-color: var(--ink);
-  background: var(--surface);
-  color: var(--ink);
+  border-color: var(--icon-color);
+  background: var(--icon-surface);
+  color: var(--icon-color);
 }
 
 .tool-copy {

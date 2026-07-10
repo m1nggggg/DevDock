@@ -91,7 +91,7 @@ const App = () => {
           <div className="tool-list">
             {filteredTools.map((tool, index) => (
               <a
-                className="tool-item"
+                className={`tool-item tool-item--${tool.tone}`}
                 href={tool.url}
                 target="_blank"
                 rel="noreferrer"
