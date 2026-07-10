@@ -13,6 +13,12 @@ export const tools: DevTool[] = [
     category: 'Collaboration',
   },
   {
+    name: 'Text Workbench',
+    url: 'https://text-workbench-black.vercel.app/',
+    description: 'Compare text and JSON locally with precise diffs.',
+    category: 'Data',
+  },
+  {
     name: 'Realm Manager',
     url: 'https://realm-manager.vercel.app/',
     description: 'Manage realm configuration from one dedicated surface.',

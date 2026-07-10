@@ -21,6 +21,14 @@ export const ToolIcon = ({ name }: ToolIconProps) => {
           <path d="M8 11h3M8 15h2" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" />
         </svg>
       );
+    case 'Text Workbench':
+      return (
+        <svg {...iconProps}>
+          <path d="M4.5 6h6M4.5 10h4M15.5 14h4M13.5 18h6" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" />
+          <path d="m10 15 2 2 3.5-5" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" />
+          <path d="M14 6h5.5M16 10h3.5" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" opacity=".55" />
+        </svg>
+      );
     case 'Realm Manager':
       return (
         <svg {...iconProps}>

@@ -11,9 +11,10 @@ Developers and delivery team members who need quick access to project tools duri
 
 ## Current Tools
 - Planning Poker
-- CSV Splitter
+- Text Workbench
 - Realm Manager
 - Menu Visualizer
+- CSV Splitter
 
 ## Product Principles
 - Keep navigation simple while the tool list is small.

@@ -14,6 +14,10 @@ describe('DevDock', () => {
       'href',
       'https://poker-pi-eosin.vercel.app/',
     );
+    expect(screen.getByRole('link', { name: /open tool text workbench/i })).toHaveAttribute(
+      'href',
+      'https://text-workbench-black.vercel.app/',
+    );
     expect(screen.getByRole('link', { name: /open tool csv splitter/i })).toHaveAttribute(
       'href',
       'https://csv-splitter-woad.vercel.app/',
@@ -26,12 +30,21 @@ describe('DevDock', () => {
       'href',
       'https://menu-visualizer-six.vercel.app/',
     );
+
+    expect(screen.getAllByRole('link', { name: /open tool/i }).map((link) => link.getAttribute('aria-label'))).toEqual([
+      'Open tool Planning Poker',
+      'Open tool Text Workbench',
+      'Open tool Realm Manager',
+      'Open tool Menu Visualizer',
+      'Open tool CSV Splitter',
+    ]);
   });
 
   it('uses related tool icons instead of numeric badges', () => {
     render(<App />);
 
     expect(screen.getByLabelText(/planning poker icon/i)).toBeInTheDocument();
+    expect(screen.getByLabelText(/text workbench icon/i)).toBeInTheDocument();
     expect(screen.getByLabelText(/realm manager icon/i)).toBeInTheDocument();
     expect(screen.getByLabelText(/menu visualizer icon/i)).toBeInTheDocument();
     expect(screen.getByLabelText(/csv splitter icon/i)).toBeInTheDocument();
@@ -40,6 +53,7 @@ describe('DevDock', () => {
     expect(screen.queryByText('2')).not.toBeInTheDocument();
     expect(screen.queryByText('3')).not.toBeInTheDocument();
     expect(screen.queryByText('4')).not.toBeInTheDocument();
+    expect(screen.queryByText('5')).not.toBeInTheDocument();
   });
 
   it('filters tools by name and description', async () => {
